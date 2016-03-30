@@ -1,0 +1,60 @@
+	.thumbnails{
+		width:100%;
+	    height:0;
+	    padding-top:100%;
+	    border:#666;
+		.thumb-content{
+		    position:absolute;
+		    top:0;
+		    height:100%;
+		    cursor:pointer;
+		    background-color:rgba(0, 0, 0, 0);
+		    img{
+		    	position:relative;
+		    	z-index:-1;
+		    }
+		    .thumb-text{
+				position:absolute;
+				color:@white;
+				height:100%;
+				width: 100%;
+			}
+		}
+		.thumb-content:hover{
+			background-color:rgba(0, 0, 0, 0.3);
+		}
+		.thb-content-noimg{
+		    position:absolute;
+		    top:0;
+		    color:@white;
+		    width:100%;
+		    height:100%;
+		    cursor:pointer;
+		}
+		.thumb-bottom{
+			position: absolute;
+		    bottom: 0;
+		    width: 100%;
+		    padding: 20px 20px 10px 20px;
+    		background-color: rgba(0,0,0,0.5);
+		}
+		.price{
+			font-size:@price;
+			font-family: 'Vollkorn', sans-serif;
+			text-align:right;
+			background-color:@pink;
+			-moz-border-radius:@radius;
+			-webkit-border-radius:@radius;
+			border-radius:@radius;
+			float: left;
+			padding: 0 10px;
+			text-shadow:none;
+			margin:@content-padding;
+		}
+	}
+	.no-img{
+		background-color:@dark-blue;
+	}
+	.no-img:hover{
+		background-color:@blue;
+	}

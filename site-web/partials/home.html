@@ -1,0 +1,27 @@
+<div ng-controller="homeCtrl">
+	<div class="row margin-row">
+		<div class="col-xs-6 col-sm-4 col-md-3 no-padding" ng-repeat="ad in ads">
+			<div class="thumbnails" ng-show="ad.thumb" click-link="detail/{{ad.id}}">
+				<div class="thumb-content">
+					<div class="thumb-text">
+						<div class="thumb-bottom">
+							<h3 class="title" ng-bind="ad.title"></h3>
+							<p><span ng-bind="ad.usercity"></span><span>&nbsp;-&nbsp;</span><span ng-bind="ad.userdepartment"></span></p>
+						</div>
+						<p class="price" ng-show="ad.price"><span ng-bind="ad.price.value"></span><sup class="exp" ng-bind="ad.price.devise"></sup></p>
+					</div>
+					<div><img src="{{ad.thumb.link}}" width="100%"></div>
+				</div>
+			</div>
+			<div class="thumbnails no-img" ng-show="!ad.thumb" click-link="detail/{{ad.id}}">
+				<div class="thb-content-noimg">
+					<div class="thumb-bottom">
+						<h3 class="title" ng-bind="ad.title"></h3>
+						<p><span ng-bind="ad.usercity"></span><span>&nbsp;-&nbsp;</span><span ng-bind="ad.userdepartment"></span></p>
+					</div>
+					<p class="price" ng-show="ad.price"><span ng-bind="ad.price.value"></span><sup class="exp" ng-bind="ad.price.devise"></sup></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

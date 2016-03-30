@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Cheaplle</title>
+	<link rel="stylesheet" type="text/css" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script data-main="js/main" src="libs/require.min.js"></script>
+</head>
+<body>
+	<div ng-controller="appCtrl">
+		<div id="header">
+			<div class="col-xs-6 col-sm-6 col-md-6 no-padding">
+				<h1 click-link="home">Cheaplle<span class="subtitle">&nbsp;It's easy to become amazing</span></h1>
+			</div>
+			<div class="col-xs-6 col-sm-6 col-md-6 no-padding">
+				<div id="user-header"><a href="#/profil"><span ng-bind="user.firstName"></span><span>&nbsp;</span><span ng-bind="user.lastName"></span></a></div>
+			</div>
+		</div>
+		<div class="wrap">
+			<div id="sidebar">
+				<div class="flatRoundedCheckbox">
+				 	<input type="checkbox" value="1" id="flatOneRoundedCheckbox" />
+				 	<label for="flatOneRoundedCheckbox"></label>
+				 	<div class="menu"><a href="#/myAds">My ads</a> | <a href="#/myFriends">My friends</a></div>
+				</div>
+			</div>
+			<div id="content">
+				<div class="container-fluid">
+					<div class="row fixed-row">
+						<div class="col-xs-12 col-sm-12 col-md-12 no-padding">
+							<div id="search">
+								<form>
+									<div class="inner-addon right-addon">
+									    <i class="glyphicon glyphicon-search glyphsearch"></i>
+									    <input type="text" name="search" ng-model="searchStr">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div ng-view></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:300);
+@import url(https://fonts.googleapis.com/css?family=Vollkorn);
+@import "header.less";
+@import "sidebar.less";
+@import "home.less";
+@import "myads.less";
+@import "form.less";
+
+@black:#000;
+@white:#FFF;
+@grey:#0C0F0E;
+@light-grey:#efefef;
+@medium-grey:#dfdfdf;
+@blue:#40A497;
+@dark-blue:#327970;
+@darker-blue:#378278;
+@pink:#dc255d;
+@light-pink:#ed92ae;
+
+@top-space:80px;
+@bottom-space:50px;
+@content-padding:20px;
+@radius:5px;
+@sup:18px;
+@small-sidebar:5%;
+@price:30px;
+
+.custom-transition(@property1,@property2,@duration){
+	-webkit-transition:@property1,@property2 @duration;
+	-moz-transition:@property1,@property2 @duration;
+	-o-transition:@property1,@property2 @duration;
+	transition:@property1,@property2 @duration;
+}
+.custom-trans(@property1,@property2,@property3,@property4,@property5,@duration){
+	-webkit-transition:@property1,@property2,@property3,@property4,@property5 @duration;
+	-moz-transition:@property1,@property2,@property3,@property4,@property5 @duration;
+	-o-transition:@property1,@property2,@property3,@property4,@property5 @duration;
+	transition:@property1,@property2,@property3,@property4,@property5 @duration;
+}
+
+/*html element*/
+html,body,h1,h2,h3{
+	margin:0;
+	padding:0;
+	font-family: 'Fira Sans', sans-serif;
+}
+body{
+	overflow-x:hidden;
+	overflow-y: scroll;
+}
+h1,h2,h3{
+	font-weight:normal;
+}
+input[type=text]{
+	padding: @radius @radius @radius 30px;
+	border:@medium-grey 1px solid;
+}
+textarea{
+	border:@medium-grey 1px solid;
+}
+input[type=text]:focus, textarea:focus{
+    outline: none !important;
+    border:1px solid @blue;
+    box-shadow: 0 0 3px @blue;
+}
+.exp{
+	font-size:@sup;
+}
+
+/*global class*/
+.no-padding{
+	padding:0;
+}
+.margin-row{
+	margin-top:@top-space;
+}
+.padding{
+	padding:@content-padding*2 @content-padding*2 0 @content-padding*2;
+}
+.fixed-row{
+	position:fixed;
+	width:100%;
+    background-color:rgba(255,255,255,0.9);
+    z-index:600;
+}
+.glyphsearch{
+	position: absolute;
+    padding: 10px;
+}
+.right-addon{
+	position: relative;
+}
+.border-row{
+	border: #ccc 1px solid;
+    margin: @content-padding 0 0 0;
+    padding:@content-padding*2 @content-padding*2 0 @content-padding*2;
+}
+.subtitle{
+	font-size:16px;
+	padding-left:10px;
+	color:@blue;
+}
+/*main elements*/
+#search{
+	height:@top-space;
+	border-bottom:@light-grey 1px solid;
+	padding:23px 0 0 20px;
+	input{
+		width:20%;
+	}
+}
+#content{
+	padding:@top-space 0 0 0;
+}

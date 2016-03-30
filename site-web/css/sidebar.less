@@ -1,0 +1,67 @@
+#sidebar{
+    color:@black;
+    z-index:2000;
+    position:fixed;
+    right:0;
+    width:@top-space;
+    height:@top-space;
+    background-color:rgba(255,255,255,.9);
+    top:@top-space;
+    text-align:center;
+    border-right:@light-grey 1px solid;
+    border-left:@light-grey 1px solid;
+    border-bottom:@light-grey 1px solid;
+    line-height:46px;
+    .menu{
+    	a{
+    		color:@black;
+    	}
+    	a:hover{
+    		color:@blue;
+    	}
+    }
+	.flatRoundedCheckbox div
+	{
+	    padding:@content-padding;
+	    height:@top-space;
+	    background:@white;
+	    position: fixed;
+	    top:@top-space - 1;
+	    border:@light-grey 1px solid;
+	    right:0;
+	    opacity:0;
+	}
+	.flatRoundedCheckbox input[type=checkbox]:checked ~ div{
+	    opacity:1;
+	    right:@top-space - 1;
+	    .custom-transition(opacity,right,500ms);
+	}
+	.flatRoundedCheckbox label{
+		cursor:pointer;
+	    position: absolute;
+	    top: 0;
+	    display: block;
+	    width: 40px;
+	    height: 40px;
+	    border-radius: 50px;
+	    margin:20px;
+	    z-index:1;
+	    background:@pink;
+	}
+	.flatRoundedCheckbox input[type=checkbox]{
+	    display:none;
+	}
+	.flatRoundedCheckbox input[type=checkbox]:checked ~ label::before{
+	    content: '-';
+	    padding:0 14px;
+	    font-size:25px;
+	    color:@white;
+	}
+	.flatRoundedCheckbox label::before{
+	    content: '+';
+	    padding:0 15px;
+	    font-size:25px;
+	    color:@white;
+	}
+
+}
